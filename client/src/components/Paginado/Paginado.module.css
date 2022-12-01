@@ -1,0 +1,44 @@
+
+    .PaginationContainer {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .NumberPaginate {
+        background-color: #5a85a9;
+        cursor: pointer;
+        float: left;
+        padding: 8px 8px 8px 8px;
+        text-decoration: none;
+        text-align: center;
+        vertical-align: center;
+        border-radius: 10px;
+        border-style: outset;
+        border-color: #bfbbcb;
+        margin: 2px;
+        width: 25px;
+        font-weight: 400;
+    }
+
+    .NumberPaginate:hover {
+        transform: translate(0px, -10px);
+    }
+
+    /* .ButtonPaginate {
+        
+        background-color: #5a85a9;
+        cursor: pointer;
+        float: left;
+        padding: 8px 8px 8px 8px;
+        text-decoration: none;
+        text-align: center;
+        vertical-align: center;
+        
+        border-style: outset;
+        border-color: #bfbbcb;
+        margin: 2px;
+        width: 45px;
+        font-weight: 400;
+    } */
+
