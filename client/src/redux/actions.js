@@ -18,7 +18,7 @@ export const FILTER_BY_WEIGHT = "FILTER_BY_WEIGHT" // se crea una constante para
 
 export const getAllDogs = () => { // esta función es la que se va a llamar en el componente
     return function (dispatch) { // esta función es la que se va a llamar en el componente
-        axios.get("http://localhost:3001/dogs") // se hace un get a la ruta /dogs
+        axios.get("/dogs") // se hace un get a la ruta /dogs
             .then(response => { // si la respuesta es exitosa
                 dispatch({ // se hace un dispatch con el type GET_ALL_DOGS y el payload con los perros que vienen en la respuesta
                     type: GET_ALL_DOGS, // type GET_ALL_DOGS
@@ -54,7 +54,7 @@ export const getAllDogs = () => { // esta función es la que se va a llamar en e
 // forma de getDogsbyName con con fetch
 export const getDogsbyName = (name) => {
     return function (dispatch) {
-        fetch(`http://localhost:3001/dogs?name=${name}`)
+        fetch(`/dogs?name=${name}`)
             .then(response => response.json())
             .then(data => {
                 dispatch({
@@ -75,7 +75,7 @@ export const getDogsbyName = (name) => {
 export const getAllTemperaments = () => {
     return function (dispatch) {
 
-        axios.get(`http://localhost:3001/temperaments`)
+        axios.get(`/temperaments`)
             .then(response => {
                 dispatch({
                     type: GET_ALL_TEMPERAMENTS,
@@ -92,7 +92,7 @@ export const getAllTemperaments = () => {
 export const getDogDetail = (id) => {
     return function (dispatch) {
 
-        axios.get(`http://localhost:3001/dogs/${id}`)
+        axios.get(`/dogs/${id}`)
             .then(response => {
                 dispatch({
                     type: GET_DOG_DETAIL,
@@ -114,7 +114,7 @@ export const getDogDetail = (id) => {
 
 export const postDog = (payload) => {
     return function (dispatch) {
-        axios.post("http://localhost:3001/dogs", payload)
+        axios.post("/dogs", payload)
             .then(response => {
                 dispatch({
                     type: POST_DOG,
@@ -167,7 +167,7 @@ export const resetState = () => {
 
 export const deleteCreatedDog = (id) => {
     return function (dispatch) {
-        axios.delete(`http://localhost:3001/dogs/${id}`)
+        axios.delete(`/dogs/${id}`)
             .then(response => {
                 dispatch({
                     type: DELETE_CREATED_DOG,
